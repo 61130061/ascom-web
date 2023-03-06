@@ -3,6 +3,7 @@ import ThreeGlobe from 'three-globe';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import * as THREE from 'three';
 
+/*
 let HEIGHT = 840;
 
 const globe = new ThreeGlobe()
@@ -50,12 +51,13 @@ window.addEventListener('resize', () => {
 
   renderer.setSize(window.innerWidth, HEIGHT);
 }, false);
+*/
 
 export default function Hero () {
 
   useEffect(() => {
-    document.getElementById('globe').innerHTML = ''; // Ensure to render only one canvas
-    document.getElementById('globe').appendChild(renderer.domElement);
+    // document.getElementById('globe').innerHTML = ''; // Ensure to render only one canvas
+    // document.getElementById('globe').appendChild(renderer.domElement);
   }, []);
 
   return (

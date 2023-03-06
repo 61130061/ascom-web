@@ -110,8 +110,24 @@ export default function Research() {
 
   return (
     <div className="container mx-auto flex flex-col items-center px-5 py-10">
+      <div className="flex justify-center px-5 py-10 mb-10">
+        <div className="rounded-xl p-5 flex items-center gap-10">
+          <div className="bg-zinc-900 rounded-lg w-[640px] h-[400px]">img</div>
+          <div className="flex-1 flex flex-col gap-12">
+            <div>
+              <div className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-bl from-pink-500 to-blue-500">LATEST PROJECT</div>
+              <h2 className="text-5xl font-bold mb-5">3STAP</h2>
+              <div>3STAP stands for 3d Satellite Trajectory and Position Tracking online application.</div>
+            </div>
+            <div className="flex gap-10 items-center">
+              <button className="font-bold bg-gradient-to-bl from-pink-500 to-blue-500 px-7 py-3 rounded-lg">Try 3STAP</button>
+              <button>Read Document</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <h1 className="text-4xl mb-10 font-semibold">Research Area</h1>
-      <div className="flex gap-5">
+      <div className="flex gap-5 mb-10">
         {contents.map((d, i) =>
           <div key={i} className="flex-1 p-8 hover:scale-105 rounded-xl bg-zinc-900">
             <div className="h-14 mb-6">
