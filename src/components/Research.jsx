@@ -129,7 +129,7 @@ export default function Research() {
       <h1 className="text-4xl mb-10 font-semibold">Research Area</h1>
       <div className="flex gap-5 mb-10">
         {contents.map((d, i) =>
-          <div key={i} className="flex-1 p-8 hover:scale-105 rounded-xl bg-zinc-900">
+          <div key={i} className="relative flex-1 p-8 hover:scale-105 rounded-xl bg-zinc-900">
             <div className="h-14 mb-6">
               {d.icon}
             </div>

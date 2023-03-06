@@ -3,21 +3,42 @@ import ThreeGlobe from 'three-globe';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import * as THREE from 'three';
 
-/*
+import countries from '../assets/countries.json';
+import globeTextureUrl from '../assets/earth-water.png';
+
 let HEIGHT = 840;
 
 const globe = new ThreeGlobe()
-  .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg');
+  .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+  .atmosphereColor("#2563eb")
+  .atmosphereAltitude(0.3)
+  .polygonsData(
+    countries.features.filter((d) => d.properties.ISO_A2 !== "AQ")
+  )
+  .polygonCapColor(() => "rgba(24, 114, 249, 0.2)")
+  .polygonSideColor(() => "rgba(167, 200, 249, 0.05)")
+
+const globeMaterial = globe.globeMaterial();
+globeMaterial.bumpScale = 10;
+new THREE.TextureLoader().load(globeTextureUrl, texture => {
+  globeMaterial.specularMap = texture;
+  globeMaterial.specular = new THREE.Color('blue');
+  globeMaterial.color = new THREE.Color('black');
+  globeMaterial.emissive = new THREE.Color("rgba(0, 16, 98, 1)");
+  globeMaterial.shininess = 0;
+});
 
 // Setup renderer
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, HEIGHT);
+renderer.setClearColor(0x000000, 0);
 
 // Setup scene
 const scene = new THREE.Scene();
 scene.add(globe);
-scene.add(new THREE.AmbientLight(0xbbbbbb));
-scene.add(new THREE.DirectionalLight(0xffffff, 0.6));
+scene.add(new THREE.AmbientLight(0xffffff, 0.75));
+scene.add(new THREE.DirectionalLight(0x5a54ff, 0.2));
+
 
 // Setup camera
 const camera = new THREE.PerspectiveCamera();
@@ -41,6 +62,7 @@ camera.position.set(-0.549814203181327, 109.31088477768138, 136.0374141999787);
   controls.update();
   renderer.render(scene, camera);
   globe.rotateY(-0.001);
+  globe.rotateX(-0.0005);
   requestAnimationFrame(animate);
 })();
 
@@ -51,19 +73,18 @@ window.addEventListener('resize', () => {
 
   renderer.setSize(window.innerWidth, HEIGHT);
 }, false);
-*/
 
 export default function Hero () {
 
   useEffect(() => {
-    // document.getElementById('globe').innerHTML = ''; // Ensure to render only one canvas
-    // document.getElementById('globe').appendChild(renderer.domElement);
+    document.getElementById('globe').innerHTML = ''; // Ensure to render only one canvas
+    document.getElementById('globe').appendChild(renderer.domElement);
   }, []);
 
   return (
     <div className="bg-black h-[840px] relative">
-      <div className="bg-blue-500" id="globe" />
-      <div className="hero-divide absolute h-[130px] left-0 bottom-0 right-0" />
+      <div id="globe" />
+      <div className="hero-divide absolute h-[240px] left-0 bottom-0 right-0" />
       <div className="absolute mt-44 left-0 top-0 right-0">
         <div className="flex flex-col gap-10 items-center z-20 px-5">
           <h1 className="max-w-[1080px] text-4xl sm:text-5xl md:text-6xl font-extrabold text-center">
