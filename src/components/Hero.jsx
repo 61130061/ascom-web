@@ -82,7 +82,7 @@ export default function Hero () {
   }, []);
 
   return (
-    <div className="bg-black h-[840px] relative">
+    <div className="h-[840px] relative">
       <div id="globe" />
       <div className="hero-divide absolute h-[240px] left-0 bottom-0 right-0" />
       <div className="absolute mt-44 left-0 top-0 right-0">

@@ -140,6 +140,7 @@ export default function Research() {
           </div>
         )}
       </div>
+      <button className="border border-white border-opacity-20 rounded-lg font-semibold px-6 py-2.5 mb-10 hover:bg-white hover:bg-opacity-10">See all</button>
     </div>
   )
 }

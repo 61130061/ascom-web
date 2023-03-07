@@ -45,7 +45,7 @@ export default function Team () {
       <div className="container mx-auto px-5">
         <div className="flex justify-between items-end mb-10">
           <div>
-            <div className="uppercase text-sm font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-500 via-yellow-500 to-yellow-500">The team</div>
+            <div className="uppercase text-sm font-bold text-transparent bg-clip-text bg-gradient-to-b from-pink-500 to-yellow-500">The team</div>
             <h1 className="text-4xl font-semibold">Meet Our Researchers</h1>
           </div>
           <div className="flex items-center gap-5">
