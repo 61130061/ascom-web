@@ -6,6 +6,7 @@ import * as THREE from 'three';
 import countries from '../assets/countries.json';
 import globeTextureUrl from '../assets/earth-water.png';
 
+/*
 let HEIGHT = 920;
 
 const globe = new ThreeGlobe()
@@ -73,13 +74,14 @@ window.addEventListener('resize', () => {
 
   renderer.setSize(window.innerWidth, HEIGHT);
 }, false);
+*/
 
 
 export default function Hero () {
 
   useEffect(() => {
-    document.getElementById('globe').innerHTML = ''; // Ensure to render only one canvas
-    document.getElementById('globe').appendChild(renderer.domElement);
+    // document.getElementById('globe').innerHTML = ''; // Ensure to render only one canvas
+    // document.getElementById('globe').appendChild(renderer.domElement);
   }, []);
 
   return (

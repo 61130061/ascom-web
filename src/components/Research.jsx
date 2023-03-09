@@ -114,7 +114,7 @@ export default function Research() {
     <section id="research" className="container mx-auto flex flex-col items-center px-5 py-10">
       <div className="flex justify-center md:px-5 py-10 mb-10">
         <div className="rounded-xl md:p-5 flex flex-wrap items-center gap-10">
-          <div className="bg-zinc-900 rounded-lg p-3 max-w-[640px]">
+          <div className="bg-white bg-opacity-5 border border-zinc-900 rounded-lg p-3 max-w-[640px]">
             <img className="object-fill rounded-lg" src={screenImg} />
           </div>
           <div className="flex-1 flex flex-col gap-12">
@@ -133,7 +133,7 @@ export default function Research() {
       <h1 className="text-4xl mb-10 font-semibold">Research Area</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
         {contents.map((d, i) =>
-          <div key={i} className="relative flex-1 p-8 hover:scale-105 rounded-xl bg-zinc-900">
+          <div key={i} className="relative flex-1 p-8 hover:scale-105 rounded-xl border border-zinc-800 bg-white bg-opacity-5">
             <div className="h-14 mb-6">
               {d.icon}
             </div>
