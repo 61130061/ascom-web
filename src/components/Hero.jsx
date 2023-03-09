@@ -6,7 +6,7 @@ import * as THREE from 'three';
 import countries from '../assets/countries.json';
 import globeTextureUrl from '../assets/earth-water.png';
 
-let HEIGHT = 840;
+let HEIGHT = 920;
 
 const globe = new ThreeGlobe()
   .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
@@ -74,6 +74,7 @@ window.addEventListener('resize', () => {
   renderer.setSize(window.innerWidth, HEIGHT);
 }, false);
 
+
 export default function Hero () {
 
   useEffect(() => {
@@ -82,10 +83,11 @@ export default function Hero () {
   }, []);
 
   return (
-    <div className="h-[840px] relative">
+    <div className="h-[920px] relative">
+      <div className="absolute top-0 left-0 z-[20] w-full h-full bg-transparent" />
       <div id="globe" />
       <div className="hero-divide absolute h-[240px] left-0 bottom-0 right-0" />
-      <div className="absolute mt-44 left-0 top-0 right-0">
+      <div className="absolute mt-28 md:mt-44 left-0 top-0 right-0 z-[30]">
         <div className="flex flex-col gap-10 items-center z-20 px-5">
           <h1 className="max-w-[1080px] text-4xl sm:text-5xl md:text-6xl font-extrabold text-center">
             Air-Space Control, Optimazition, and Management <span className="text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-pink-500">Laboratory</span>

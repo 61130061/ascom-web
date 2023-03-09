@@ -112,8 +112,8 @@ export default function Research() {
 
   return (
     <section id="research" className="container mx-auto flex flex-col items-center px-5 py-10">
-      <div className="flex justify-center px-5 py-10 mb-10">
-        <div className="rounded-xl p-5 flex items-center gap-10">
+      <div className="flex justify-center md:px-5 py-10 mb-10">
+        <div className="rounded-xl md:p-5 flex flex-wrap items-center gap-10">
           <div className="bg-zinc-900 rounded-lg p-3 max-w-[640px]">
             <img className="object-fill rounded-lg" src={screenImg} />
           </div>
@@ -123,15 +123,15 @@ export default function Research() {
               <h2 className="text-5xl font-bold mb-5">3STAP</h2>
               <div>3STAP stands for 3d Satellite Trajectory and Position Tracking online application.</div>
             </div>
-            <div className="flex gap-10 items-center">
-              <button className="font-bold bg-gradient-to-bl from-pink-500 to-blue-500 px-7 py-3 rounded-lg">Try 3STAP</button>
+            <div className="flex flex-wrap gap-10 items-center">
+              <button className="shrink-0 font-bold bg-gradient-to-bl from-pink-500 to-blue-500 px-7 py-3 rounded-lg">Try 3STAP</button>
               <button>Read Document</button>
             </div>
           </div>
         </div>
       </div>
       <h1 className="text-4xl mb-10 font-semibold">Research Area</h1>
-      <div className="flex gap-5 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
         {contents.map((d, i) =>
           <div key={i} className="relative flex-1 p-8 hover:scale-105 rounded-xl bg-zinc-900">
             <div className="h-14 mb-6">
