@@ -41,7 +41,7 @@ export default function Team () {
   }
 
   return (
-    <div className="py-10">
+    <section id="team" className="py-10">
       <div className="container mx-auto px-5">
         <div className="flex justify-between items-end mb-10">
           <div>
@@ -71,6 +71,6 @@ export default function Team () {
           </div>
         )}
       </div>
-    </div>
+    </section>
   )
 }

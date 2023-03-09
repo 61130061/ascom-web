@@ -1,7 +1,13 @@
 import logo from '../assets/ascom_logo.png';
 
 export default function Navbar() {
-  const menu = [ "Research", "Team", "About Us", "Contact us", "Github"];
+  const menu = ["Home", "Research", "Team", "Contact", "Github"];
+
+  const scrollTo = (id) => {
+    const ele = document.getElementById(id.toLowerCase());
+
+    if (ele) ele.scrollIntoView({ behavior: 'smooth' });
+  }
 
   return (
     <div className="absolute top-0 left-0 w-full z-30">
@@ -11,7 +17,7 @@ export default function Navbar() {
         </div>
         <div className="flex items-center gap-2">
           {menu.map((d) =>
-            <button className="hover:bg-white rounded hover:bg-opacity-30 px-2.5 py-1">{d}</button>
+            <button onClick={() => scrollTo(d)} className="hover:bg-white rounded hover:bg-opacity-30 px-2.5 py-1">{d}</button>
           )}
         </div>
       </div>

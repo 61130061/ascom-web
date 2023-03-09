@@ -1,3 +1,5 @@
+import screenImg from '../assets/3stap-screenshot.png';
+
 function SatIcon() {
   return (
     <svg className="h-12 aspect-square" fill="currentColor" version="1.1" viewBox="0 0 501.413 501.413">
@@ -109,10 +111,12 @@ export default function Research() {
   ]
 
   return (
-    <div className="container mx-auto flex flex-col items-center px-5 py-10">
+    <section id="research" className="container mx-auto flex flex-col items-center px-5 py-10">
       <div className="flex justify-center px-5 py-10 mb-10">
         <div className="rounded-xl p-5 flex items-center gap-10">
-          <div className="bg-zinc-900 rounded-lg w-[640px] h-[400px]">img</div>
+          <div className="bg-zinc-900 rounded-lg p-3 max-w-[640px]">
+            <img className="object-fill rounded-lg" src={screenImg} />
+          </div>
           <div className="flex-1 flex flex-col gap-12">
             <div>
               <div className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-bl from-pink-500 to-blue-500">LATEST PROJECT</div>
@@ -141,6 +145,6 @@ export default function Research() {
         )}
       </div>
       <button className="border border-white border-opacity-20 rounded-lg font-semibold px-6 py-2.5 mb-10 hover:bg-white hover:bg-opacity-10">See all</button>
-    </div>
+    </section>
   )
 }
