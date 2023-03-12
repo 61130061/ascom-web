@@ -90,7 +90,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'space',
+            docId: 'publication',
             position: 'right',
             label: 'Research',
           },
