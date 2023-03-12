@@ -20,21 +20,25 @@ export default function Home() {
   const research = [
     {
       title: 'Space',
+      url: 'docs/space',
       icon: <SatIcon />,
       des: 'focusing on the application of advanced computerized algorithm by implementation of various space objects according to the increasing in demand of space exploring in the near future.'
     },
     {
       title: 'UAV',
+      url: 'docs/uav',
       icon: <UAVIcon />,
       des: 'focus on autonomous unmanned aerial vehicle communication, navigation, guidance, and control systems.'
     },
     {
       title: 'Airport',
+      url: 'docs/airport',
       icon: <PlaneIcon />,
       des: 'focusing on the airport traffic management and integrating of machine learning methods.'
     },
     {
       title: 'Geographic Information System (GIS)',
+      url: 'docs/gis',
       icon: <GlobeIcon />,
       des: 'focusing on enviromental remote sensoring and image processing.'
     },
@@ -102,7 +106,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
             {research.map((d, i) =>
               <Link
-                to={'docs/' + d.title.toLowerCase()}
+                to={d.url}
                 key={i}
                 className="hover:no-underline text-white relative flex-1 p-5 md:p-8 rounded-xl border border-zinc-700 bg-white bg-opacity-5 hover:cursor-pointer hover:border-zinc-600 hover:bg-opacity-10"
               >
