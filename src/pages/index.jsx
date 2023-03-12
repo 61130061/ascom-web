@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import teams from '../team-data';
@@ -10,6 +10,9 @@ import ccosLogo from '../../static/ccos_logo.png';
 import screenImg from '../../static/3stap-screenshot.png';
 
 import { SatIcon, UAVIcon, PlaneIcon, GlobeIcon } from '../components/Icon';
+import Globe from '../globe';
+
+const globe = new Globe();
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -44,6 +47,9 @@ export default function Home() {
     });
   }
 
+  useEffect(() => {
+    globe.render('globe');
+  }, []);
 
   return (
     <Layout
