@@ -7,7 +7,7 @@ export default function Teams () {
   return (
     <Layout
       title={`Team`}
-      description="ASCOM Lab researchers and teams"
+      description="Meet our teams of scientists and problem solvers."
     >
       <main className="py-5 container">
         <h1 className="text-5xl text-center uppercase my-14">Meet our team</h1>

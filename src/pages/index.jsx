@@ -47,8 +47,8 @@ export default function Home() {
 
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`Homepage`}
+      description="Air-Space Control, Optimazition, and Management Laboratory"
     >
       <main>
         <div className="h-[920px] relative">
