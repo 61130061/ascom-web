@@ -42,8 +42,9 @@ body, .main-wrapper {
 }
 
 .navbar, .footer {
-  background-color: #11111199;
-  backdrop-filter: blur(100px);
+  background-color: #111111;
+  /* background-color: #11111199;
+  -webkit-backdrop-filter: blur(100px); */
 }
 
 .navbar__inner {

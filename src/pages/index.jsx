@@ -1,16 +1,13 @@
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import teams from '../team-data';
+import Link from '@docusaurus/Link';
 
 import astrolabLogo from '../../static/astrolab_logo.png';
 import satangLogo from '../../static/satang_logo.png';
 import ccosLogo from '../../static/ccos_logo.png';
 import screenImg from '../../static/3stap-screenshot.png';
-import patcharinImg from '../../static/patcharin.png';
-import peerapongImg from '../../static/peerapong.jpg';
-import thaweerathImg from '../../static/thaweerath.jpg';
-import tanatthepImg from '../../static/tanatthep.jpg';
-import warunyuImg from '../../static/warunyu.jpg';
 
 import { SatIcon, UAVIcon, PlaneIcon, GlobeIcon } from '../components/Icon';
 
@@ -37,34 +34,6 @@ export default function Home() {
       title: 'Geographic Information System (GIS)',
       icon: <GlobeIcon />,
       des: 'focusing on enviromental remote sensoring and image processing.'
-    },
-  ]
-
-  const teams = [
-    {
-      name: "Patcharin Kamsing, Ph.D",
-      role: "Founder & Head of Laboratory",
-      img: patcharinImg
-    },
-    {
-      name: "Peerapong Torteeka, Ph.D",
-      role: "Guest researcher",
-      img: peerapongImg
-    },
-    {
-      name: "Thaweerath Phisannupawong",
-      role: "Guest researcher",
-      img: thaweerathImg
-    },
-    {
-      name: "Warunyu Hematulin",
-      role: "Guest researcher",
-      img: warunyuImg
-    },
-    {
-      name: "Tanatthep Jarawan",
-      role: "Guest researcher",
-      img: tanatthepImg
     },
   ]
 
@@ -107,7 +76,7 @@ export default function Home() {
         <section id="research" className="container mx-auto flex flex-col items-center px-5 py-10">
           <div className="flex justify-center md:px-5 py-10 mb-10">
             <div className="rounded-xl md:p-5 flex flex-wrap items-center gap-10">
-              <div className="bg-white bg-opacity-5 border border-zinc-900 rounded-lg p-3 max-w-[640px]">
+              <div className="bg-white bg-opacity-5 border border-zinc-900 rounded-lg p-2 md:p-3 max-w-[640px] flex items-center">
                 <img className="object-fill rounded-lg" src={screenImg} />
               </div>
               <div className="flex-1 flex flex-col gap-12">
@@ -126,7 +95,11 @@ export default function Home() {
           <h1 className="text-4xl mb-10 font-semibold">Research Area</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
             {research.map((d, i) =>
-              <div key={i} className="relative flex-1 p-8 rounded-xl border border-zinc-700 bg-white bg-opacity-5 hover:cursor-pointer hover:border-zinc-600 hover:bg-opacity-10">
+              <Link
+                to={'docs/' + d.title.toLowerCase()}
+                key={i}
+                className="hover:no-underline text-white relative flex-1 p-5 md:p-8 rounded-xl border border-zinc-700 bg-white bg-opacity-5 hover:cursor-pointer hover:border-zinc-600 hover:bg-opacity-10"
+              >
                 <div className="h-14 mb-6">
                   {d.icon}
                 </div>
@@ -134,10 +107,9 @@ export default function Home() {
                 <div className="text-sm text-gray-300">
                   {d.des}
                 </div>
-              </div>
+              </Link>
             )}
           </div>
-          <button className="border border-zinc-700 border-opacity-20 bg-transparent text-base hover:cursor-pointer rounded-lg font-semibold px-6 py-2.5 mb-10 hover:bg-white hover:bg-opacity-10">See all</button>
         </section>
 
         <section id="team" className="py-5">
@@ -162,16 +134,18 @@ export default function Home() {
             </div>
           </div>
           <div id="team-slider" className="hide-scrollbar flex overflow-x-scroll snap-mandatory snap-x mb-5">
-            {[...teams, ...teams].map((d, i) =>
-              <div key={i} className="snap-start px-5 mb-5">
-                <img className="mb-3 rounded-lg min-w-[300px]" src={d.img} />
-                <h2 className="text-lg font-bold mb-1">{d.name}</h2>
-                <div className="text-sm text-gray-300">{d.role}</div>
-              </div>
+            {Object.entries(teams).map(([key, value], oi) => 
+              value.map((d, i) =>
+                <div key={i} className="snap-start px-3 md:px-5 mb-5">
+                  <img className="mb-3 rounded-lg min-w-[250px] md:min-w-[300px] aspect-square" src={d.img} />
+                  <h2 className="text-lg font-bold mb-1">{d.name}</h2>
+                  <div className="text-sm text-gray-300">{d.role}</div>
+                </div>
+              )
             )}
           </div>
           <div className="flex justify-center">
-            <button className="border border-zinc-700 border-opacity-20 bg-transparent text-base hover:cursor-pointer rounded-lg font-semibold px-6 py-2.5 mb-10 hover:bg-white hover:bg-opacity-10">See all</button>
+              <Link to="/teams" className="text-white border border-zinc-700 border-opacity-20 bg-transparent text-base hover:cursor-pointer rounded-lg font-semibold px-6 py-2.5 mb-10 hover:bg-white hover:bg-opacity-10">See all</Link>
           </div>
         </section>
 

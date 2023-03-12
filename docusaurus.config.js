@@ -82,19 +82,20 @@ const config = {
       },
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'ASCOM',
+        // title: 'ASCOM',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'ASCOM Logo',
+          src: 'ascom_logo.png',
         },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
+            docId: 'space',
+            position: 'right',
+            label: 'Research',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/teams', label: 'Team', position: 'right'},
+          {to: '/contact', label: 'Contact', position: 'right'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
