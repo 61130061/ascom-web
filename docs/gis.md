@@ -6,6 +6,9 @@ sidebar_position: 5
 
 ## Image Processing Previous Research
 
+![](/gis/1.jpg)
+
+
 ### Publication
 
 - P. Insom, C. Cao, P. Boonsrimuang, S. Bao, W. Chen and X. Ni, “A support vector machine-based particle filter for improved land cover classification applied to MODIS data,” 2016 IEEE International Geoscience and Remote Sensing Symposium (IGARSS), 2016, pp. 775-778, doi: 10.1109/IGARSS.2016.7729195.
