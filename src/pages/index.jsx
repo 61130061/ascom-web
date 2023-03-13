@@ -62,8 +62,8 @@ export default function Home() {
     >
       <main>
         <div className="h-[920px] relative">
-          <div className="absolute top-0 left-0 z-[20] w-full h-full bg-transparent" />
-          <div id="globe" />
+          {/* <div className="absolute top-0 left-0 z-[20] w-full h-full bg-transparent" /> */}
+          <div className="overflow-hidden" id="globe" />
           <div className="bg-gradient-to-b from-transparent to-[#111111] absolute h-[240px] left-0 bottom-0 right-0" />
           <div className="absolute mt-28 md:mt-44 left-0 top-0 right-0 z-[30]">
             <div className="flex flex-col gap-5 items-center z-20 px-5">
