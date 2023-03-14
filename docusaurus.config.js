@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://ascom-lab.space',
+  url: 'http://61130061.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -146,7 +146,7 @@ const config = {
           //   ],
           // },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} ASCOM-Lab`,
+        copyright: `Copyright © ${new Date().getFullYear()} ASCOM Laboratory`,
       },
       prism: {
         theme: lightCodeTheme,

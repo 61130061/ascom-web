@@ -3,6 +3,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import teams from '../team-data';
 import Link from '@docusaurus/Link';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
 import astrolabLogo from '../../static/astrolab_logo.png';
 import satangLogo from '../../static/satang_logo.png';
@@ -12,9 +13,21 @@ import screenImg from '../../static/3stap-screenshot.png';
 import { SatIcon, UAVIcon, PlaneIcon, GlobeIcon } from '../components/Icon';
 import Globe from '../globe';
 
-const globe = new Globe();
-
 export default function Home() {
+
+  useEffect(() => {
+    if (ExecutionEnvironment.canUseDOM) {
+      window.addEventListener('keydown', (e) => {
+        if (e.code === 'Period') {
+          location.assign(location.href.replace('.com', '.dev'));
+        }
+      });
+      const globe = new Globe(window);
+
+      globe.render('globe');
+    }
+  }, [])
+
   const { siteConfig } = useDocusaurusContext();
 
   const research = [
@@ -50,10 +63,6 @@ export default function Home() {
       behavior: 'smooth'
     });
   }
-
-  useEffect(() => {
-    globe.render('globe');
-  }, []);
 
   return (
     <Layout

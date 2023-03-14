@@ -1,4 +1,4 @@
-import ThreeGlobe from 'three-globe';
+// import ThreeGlobe from 'three-globe';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import * as THREE from 'three';
 
@@ -6,10 +6,13 @@ import countries from '../static/countries.json';
 import globeTextureUrl from '../static/earth-water.png';
 
 class Globe {
-  constructor() {
+  constructor(clientWindow) {
     this.HEIGHT = 920;
+    this.window = clientWindow;
 
-    this.globe = new ThreeGlobe()
+    const ThreeGlobe = require('three-globe');
+
+    this.globe = new ThreeGlobe.default()
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
       .atmosphereColor("#2563eb")
       .atmosphereAltitude(0.3)
@@ -31,7 +34,7 @@ class Globe {
 
     // Setup renderer
     this.renderer = new THREE.WebGLRenderer();
-    this.renderer.setSize(window.innerWidth, this.HEIGHT);
+    this.renderer.setSize(this.window.innerWidth, this.HEIGHT);
     this.renderer.setClearColor(0x000000, 0);
 
     // Setup scene
@@ -42,7 +45,7 @@ class Globe {
 
     // Setup camera
     this.camera = new THREE.PerspectiveCamera();
-    this.camera.aspect = window.innerWidth / window.innerHeight;
+    this.camera.aspect = this.window.innerWidth / this.window.innerHeight;
     this.camera.updateProjectionMatrix();
     this.camera.position.z = 100;
     
@@ -58,10 +61,10 @@ class Globe {
     this.animate();
 
     // Update Screen Resize
-    window.addEventListener('resize', () => {
-      this.camera.aspect = window.innerWidth / this.HEIGHT;
+    this.window.addEventListener('resize', () => {
+      this.camera.aspect = this.window.innerWidth / this.HEIGHT;
       this.camera.updateProjectionMatrix();
-      this.renderer.setSize(window.innerWidth, this.HEIGHT);
+      this.renderer.setSize(this.window.innerWidth, this.HEIGHT);
     }, false);
   }
 
