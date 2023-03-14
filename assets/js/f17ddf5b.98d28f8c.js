@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkascom_web=self.webpackChunkascom_web||[]).push([[977],{9944:e=>{e.exports=JSON.parse('{"label":"hello","permalink":"/ascom-web/blog/tags/hello","allTagsPath":"/ascom-web/blog/tags","count":2}')}}]);
