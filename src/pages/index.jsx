@@ -13,17 +13,12 @@ import screenImg from '../../static/3stap-screenshot.png';
 import { SatIcon, UAVIcon, PlaneIcon, GlobeIcon } from '../components/Icon';
 import Globe from '../globe';
 
+
 export default function Home() {
 
   useEffect(() => {
     if (ExecutionEnvironment.canUseDOM) {
-      window.addEventListener('keydown', (e) => {
-        if (e.code === 'Period') {
-          location.assign(location.href.replace('.com', '.dev'));
-        }
-      });
-      const globe = new Globe(window);
-
+      const globe = new Globe();
       globe.render('globe');
     }
   }, [])
@@ -156,7 +151,7 @@ export default function Home() {
             {Object.entries(teams).map(([key, value], oi) => 
               value.map((d, i) =>
                 <div key={i} className="snap-start px-3 md:px-5 mb-5">
-                  <img className="mb-3 rounded-lg min-w-[250px] md:min-w-[300px] aspect-square" src={d.img} />
+                  <img className="mb-3 rounded-lg min-w-[250px] md:min-w-[300px] aspect-square" src={siteConfig.baseUrl + d.img} />
                   <h2 className="text-lg font-bold mb-1">{d.name}</h2>
                   <div className="text-sm text-gray-300">{d.role}</div>
                 </div>

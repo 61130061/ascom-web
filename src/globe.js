@@ -6,9 +6,8 @@ import countries from '../static/countries.json';
 import globeTextureUrl from '../static/earth-water.png';
 
 class Globe {
-  constructor(clientWindow) {
+  constructor() {
     this.HEIGHT = 920;
-    this.window = clientWindow;
 
     const ThreeGlobe = require('three-globe');
 
@@ -34,7 +33,7 @@ class Globe {
 
     // Setup renderer
     this.renderer = new THREE.WebGLRenderer();
-    this.renderer.setSize(this.window.innerWidth, this.HEIGHT);
+    this.renderer.setSize(window.innerWidth, this.HEIGHT);
     this.renderer.setClearColor(0x000000, 0);
 
     // Setup scene
@@ -45,7 +44,7 @@ class Globe {
 
     // Setup camera
     this.camera = new THREE.PerspectiveCamera();
-    this.camera.aspect = this.window.innerWidth / this.window.innerHeight;
+    this.camera.aspect = window.innerWidth / window.innerHeight;
     this.camera.updateProjectionMatrix();
     this.camera.position.z = 100;
     
@@ -61,10 +60,10 @@ class Globe {
     this.animate();
 
     // Update Screen Resize
-    this.window.addEventListener('resize', () => {
-      this.camera.aspect = this.window.innerWidth / this.HEIGHT;
+    window.addEventListener('resize', () => {
+      this.camera.aspect = window.innerWidth / this.HEIGHT;
       this.camera.updateProjectionMatrix();
-      this.renderer.setSize(this.window.innerWidth, this.HEIGHT);
+      this.renderer.setSize(window.innerWidth, this.HEIGHT);
     }, false);
   }
 

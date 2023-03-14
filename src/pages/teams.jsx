@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import contents from '../team-data';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export default function Teams () {
+  const { siteConfig } = useDocusaurusContext();
 
   return (
     <Layout
@@ -17,7 +19,7 @@ export default function Teams () {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-4 gap-y-6 justify-center">
               {value.map((d, pi) => 
                 <div key={pi}>
-                  <img className="mb-3 rounded-lg aspect-square w-[250px] md:w-[300px]" src={d.img} />
+                  <img className="mb-3 rounded-lg aspect-square w-[250px] md:w-[300px]" src={siteConfig.baseUrl + d.img} />
                   <h3 className="text-base font-bold mb-1">{d.name}</h3>
                   <div className="text-sm text-gray-300">{d.role}</div>
                 </div>
