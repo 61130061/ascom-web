@@ -61,7 +61,6 @@ export default function Home() {
 
   return (
     <Layout
-      title={`Homepage`}
       description="Air-Space Control, Optimazition, and Management Laboratory"
     >
       <main>
@@ -167,7 +166,7 @@ export default function Home() {
           <div className="rounded-2xl bg-gradient-to-r from-yellow-500 via-pink-500 to-blue-500 text-center shadow border border-zinc-700">
             <div className="rounded-2xl bg-zinc-900 bg-opacity-20 py-10 md:py-16">
               <div>Like our work?</div>
-              <h1 className="text-5xl font-bold mt-2 mb-8">Let's Talk!!</h1>
+              <h1 className="text-5xl font-bold mt-2 mb-8">Contact us!!</h1>
               <div className="max-w-[1020px] px-10 m-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 justify-center text-start gap-10 flex-wrap">
                   <div className="flex-1 text-xl font-semibold border border-white p-5 rounded-lg bg-white bg-opacity-10">
