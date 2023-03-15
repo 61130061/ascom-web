@@ -3,45 +3,45 @@
     {
       "name": "Patcharin Kamsing, Ph.D",
       "role": "Founder & Head of Laboratory",
-      "img": "/teams/patcharin.png"
+      "img": "teams/patcharin.png"
     },
     {
       "name": "Paradech Dechpaiboonyos",
-      "img": "/teams/default.jpeg"
+      "img": "teams/default.jpeg"
     },
     {
       "name": "Chayakorn Intasan",
-      "img": "/teams/default.jpeg"
+      "img": "teams/default.jpeg"
     },
     {
       "name": "Wuttichai Boonpook, Ph.D",
       "role": "Guest researcher",
-      "img": "/teams/wuttichai.jpg"
+      "img": "teams/wuttichai.jpg"
     },
     {
       "name": "Shariff Manuthasna",
       "role": "Guest researcher",
-      "img": "/teams/shariff.jpg"
+      "img": "teams/shariff.jpg"
     },
     {
       "name": "Peerapong Torteeka, Ph.D",
       "role": "Guest researcher",
-      "img": "/teams/peerapong.jpg"
+      "img": "teams/peerapong.jpg"
     },
     {
       "name": "Thaweerath Phisannupawong",
       "role": "Guest researcher",
-      "img": "/teams/thaweerath.jpg"
+      "img": "teams/thaweerath.jpg"
     },
     {
       "name": "Warunyu Hematulin",
       "role": "Guest researcher",
-      "img": "/teams/warunyu.jpg"
+      "img": "teams/warunyu.jpg"
     },
     {
       "name": "Tanatthep Jarawan",
       "role": "Guest researcher",
-      "img": "/teams/tanatthep.jpg"
+      "img": "teams/tanatthep.jpg"
     }
   ],
 
@@ -49,47 +49,47 @@
     {
       "name": "Chairat Suparnunt",
       "role": "",
-      "img": "/teams/S__58073093-1.jpg"
+      "img": "teams/S__58073093-1.jpg"
     },
     {
       "name": "Chon Boonvongsobhon",
       "role": "",
-      "img": "/teams/314456.jpg"
+      "img": "teams/314456.jpg"
     },
     {
       "name": "Farhaad Eounes Baig",
       "role": "",
-      "img": "/teams/S__172785668-1.jpg"
+      "img": "teams/S__172785668-1.jpg"
     },
     {
       "name": "Prachaya Leelalerthpat",
       "role": "",
-      "img": "/teams/S__6971424.jpg"
+      "img": "teams/S__6971424.jpg"
     },
     {
       "name": "Chittawan Hanjarat",
       "role": "",
-      "img": "/teams/Chittawan.jpeg"
+      "img": "teams/Chittawan.jpeg"
     },
     {
       "name": "Kittiphan Junyiam",
       "role": "",
-      "img": "/teams/Kittiphan.jpeg"
+      "img": "teams/Kittiphan.jpeg"
     },
     {
       "name": "Pornpong Pasokpuckdee",
       "role": "",
-      "img": "/teams/S__6963363.jpg"
+      "img": "teams/S__6963363.jpg"
     },
     {
       "name": "Sittikorn Srisongkarm",
       "role": "",
-      "img": "/teams/S__6963336.jpg"
+      "img": "teams/S__6963336.jpg"
     },
     {
       "name": "Warakot Kitcharoen",
       "role": "",
-      "img": "/teams/S__6963345.jpg"
+      "img": "teams/S__6963345.jpg"
     }
   ],
 
@@ -97,32 +97,32 @@
     {
       "name": "Warunyu Hematulin",
       "role": "",
-      "img": "/teams/warunyu.jpg"
+      "img": "teams/warunyu.jpg"
     },
     {
       "name": "Thanaporn Somjit",
       "role": "",
-      "img": "/teams/Thanaporn-768x1024.jpg"
+      "img": "teams/Thanaporn-768x1024.jpg"
     },
     {
       "name": "Tanatthep Jarawan",
       "role": "",
-      "img": "/teams/tanatthep.jpg"
+      "img": "teams/tanatthep.jpg"
     },
     {
       "name": "Tachodom Chooraks",
       "role": "",
-      "img": "/teams/ta.jpg"
+      "img": "teams/ta.jpg"
     },
     {
       "name": "Sookaseam Mungkhud",
       "role": "",
-      "img": "/teams/pluem.jpg"
+      "img": "teams/pluem.jpg"
     },
     {
       "name": "Sitthirak Sangkarak",
       "role": "",
-      "img": "/teams/atin.jpg"
+      "img": "teams/atin.jpg"
     }
   ],
 
@@ -130,7 +130,7 @@
     {
       "name": "Thaweerath Phisannupawong",
       "role": "",
-      "img": "/teams/thaweerath.jpg"
+      "img": "teams/thaweerath.jpg"
     }
   ]
 }

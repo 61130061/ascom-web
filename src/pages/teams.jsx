@@ -12,7 +12,7 @@ export default function Teams () {
       description="Meet our teams of scientists and problem solvers."
     >
       <main className="py-5 container">
-        <h1 className="text-5xl text-center uppercase my-14">Meet our team</h1>
+        <h1 className="text-3xl md:text-5xl text-center uppercase my-10 md:my-14">Meet our team</h1>
         {Object.entries(contents).map(([key, value], ci) => 
           <div key={ci} className="mb-10">
             <h2 className="text-3xl mb-5">{key}</h2>

@@ -18,8 +18,9 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ASCOM', // Usually your GitHub org/user name.
+  organizationName: '61130061', // Usually your GitHub org/user name.
   projectName: 'ascom-web', // Usually your repo name.
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -80,7 +81,7 @@ const config = {
         defaultMode: 'dark',
         disableSwitch: true,
       },
-      image: 'img/docusaurus-social-card.jpg',
+      // image: 'img/docusaurus-social-card.jpg',
       navbar: {
         // title: 'ASCOM',
         logo: {
@@ -95,7 +96,7 @@ const config = {
             label: 'Research',
           },
           {to: '/teams', label: 'Team', position: 'right'},
-          {to: '/contact', label: 'Contact', position: 'right'},
+          {href: '/#contact', label: 'Contact', position: 'right'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',

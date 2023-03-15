@@ -69,7 +69,7 @@ export default function Home() {
           {/* <div className="absolute top-0 left-0 z-[20] w-full h-full bg-transparent" /> */}
           <div className="overflow-hidden" id="globe" />
           <div className="bg-gradient-to-b from-transparent to-[#111111] absolute h-[240px] left-0 bottom-0 right-0" />
-          <div className="absolute mt-28 md:mt-44 left-0 top-0 right-0 z-[30]">
+          <div className="absolute pt-28 md:pt-44 left-0 top-0 right-0 z-[30] h-full">
             <div className="flex flex-col gap-5 items-center z-20 px-5">
               <h1 className="max-w-[1080px] text-4xl sm:text-5xl md:text-6xl font-extrabold text-center">
                 Air-Space Control, Optimazition, and Management <span className="text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-pink-500">Laboratory</span>
@@ -100,8 +100,8 @@ export default function Home() {
                   <div>3STAP stands for 3d Satellite Trajectory and Position Tracking online application.</div>
                 </div>
                 <div className="flex flex-wrap gap-5 items-center">
-                  <button className="shrink-0 font-bold bg-gradient-to-bl text-base hover:cursor-pointer from-pink-500 to-blue-500 px-7 py-3 rounded-lg">Try 3STAP</button>
-                  <button className="bg-transparent text-base hover:cursor-pointer hover:bg-white hover:bg-opacity-5 px-7 py-3 rounded-lg">Read Document</button>
+                  <button className="shrink-0 text-white font-bold bg-gradient-to-bl text-base hover:cursor-pointer from-pink-500 to-blue-500 px-7 py-3 rounded-lg">Try 3STAP</button>
+                  <Link className="bg-transparent text-base text-white hover:cursor-pointer hover:bg-white hover:bg-opacity-5 rounded-lg p-3">Read Document</Link>
                 </div>
               </div>
             </div>
@@ -134,13 +134,13 @@ export default function Home() {
                 <h1 className="text-4xl font-semibold">Meet Our Researchers</h1>
               </div>
               <div className="flex items-center gap-5">
-                <button className="w-9 aspect-square rounded-lg hover:cursor-pointer bg-white bg-opacity-20" onClick={() => forceScroll(true)}>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 m-auto">
+                <button className="flex justify-center items-center text-white w-9 aspect-square rounded-lg hover:cursor-pointer bg-white bg-opacity-20" onClick={() => forceScroll(true)}>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                   </svg>
                 </button>
-                <button className="w-9 aspect-square rounded-lg hover:cursor-pointer bg-white bg-opacity-20" onClick={() => forceScroll()}>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 m-auto">
+                <button className="flex justify-center items-center text-white w-9 aspect-square rounded-lg hover:cursor-pointer bg-white bg-opacity-20" onClick={() => forceScroll()}>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                   </svg>
                 </button>
@@ -151,7 +151,7 @@ export default function Home() {
             {Object.entries(teams).map(([key, value], oi) => 
               value.map((d, i) =>
                 <div key={i} className="snap-start px-3 md:px-5 mb-5">
-                  <img className="mb-3 rounded-lg min-w-[250px] md:min-w-[300px] aspect-square" src={siteConfig.baseUrl + d.img} />
+                  <img className="mb-3 rounded-lg min-w-[250px] md:min-w-[300px] h-[250px] md:h-[300px]" src={siteConfig.baseUrl + d.img} />
                   <h2 className="text-lg font-bold mb-1">{d.name}</h2>
                   <div className="text-sm text-gray-300">{d.role}</div>
                 </div>
@@ -165,10 +165,27 @@ export default function Home() {
 
         <section id="contact" className="container mx-auto px-5 my-10">
           <div className="rounded-2xl bg-gradient-to-r from-yellow-500 via-pink-500 to-blue-500 text-center shadow border border-zinc-700">
-            <div className="rounded-2xl bg-zinc-900 bg-opacity-30 py-10 md:py-16">
+            <div className="rounded-2xl bg-zinc-900 bg-opacity-20 py-10 md:py-16">
               <div>Like our work?</div>
-              <h1 className="text-5xl font-bold mt-3 mb-10">Let's Talk!!</h1>
-              <button className="bg-transparent text-base hover:cursor-pointer px-6 py-2.5 border border-white rounded-lg w-fit hover:bg-white hover:bg-opacity-20 font-semibold">Get in touch</button>
+              <h1 className="text-5xl font-bold mt-2 mb-8">Let's Talk!!</h1>
+              <div className="max-w-[1020px] px-10 m-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 justify-center text-start gap-10 flex-wrap">
+                  <div className="flex-1 text-xl font-semibold border border-white p-5 rounded-lg bg-white bg-opacity-10">
+                    <div className="text-base font-normal">Contact</div>
+                    <div>Write us an email directly at</div>
+                    <div className="font-bold underline undersline-offset-2">ascomlab.space@gmail.com</div>
+                  </div>
+                  <div className="flex-1 text-lg font-semibold border border-white p-5 rounded-lg bg-white bg-opacity-10">
+                    <div className="text-base font-normal">Address</div>
+                    <div className="font-bold">International Academy of Aviation Industry</div>
+                    <div>1 Thanon Chalong Krung,
+                      Lam Prathew,
+                      Lat Krabang,
+                      Bangkok,
+                      10520</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
