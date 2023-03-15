@@ -80,7 +80,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mx-auto p-5 flex flex-wrap gap-10 justify-center items-center">
+        <div className="mx-auto p-5 flex flex-wrap gap-y-5 gap-x-10 justify-center items-center">
           <img src={astrolabLogo} className="s-logo opacity-30 h-16 mt-10" />
           <img src={ccosLogo} className="s-logo opacity-30 h-16" />
           <img src={satangLogo} className="s-logo opacity-30 h-10" />
@@ -134,12 +134,12 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-5">
                 <button className="flex justify-center items-center text-white w-9 aspect-square rounded-lg hover:cursor-pointer bg-white bg-opacity-20" onClick={() => forceScroll(true)}>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" width="24px" height="24px">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                   </svg>
                 </button>
                 <button className="flex justify-center items-center text-white w-9 aspect-square rounded-lg hover:cursor-pointer bg-white bg-opacity-20" onClick={() => forceScroll()}>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" width="24px" height="24px">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                   </svg>
                 </button>
