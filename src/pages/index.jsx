@@ -99,8 +99,8 @@ export default function Home() {
                   <div>3STAP stands for 3d Satellite Trajectory and Position Tracking online application.</div>
                 </div>
                 <div className="flex flex-wrap gap-5 items-center">
-                  <button className="shrink-0 text-white font-bold bg-gradient-to-bl text-base hover:cursor-pointer from-pink-500 to-blue-500 px-7 py-3 rounded-lg">Try 3STAP</button>
-                  <Link className="bg-transparent text-base text-white hover:cursor-pointer hover:bg-white hover:bg-opacity-5 rounded-lg p-3">Read Document</Link>
+                  <a href="https://61130061.github.io/3stap/" target="_blank" className="shrink-0 hover:no-underline text-white font-bold bg-gradient-to-bl text-base hover:cursor-pointer from-pink-500 to-blue-500 px-7 py-3 rounded-lg">Try 3STAP</a>
+                  <Link to="docs/projects/3stap" className="bg-transparent text-base text-white hover:cursor-pointer hover:bg-white hover:bg-opacity-5 rounded-lg p-3">Read Document</Link>
                 </div>
               </div>
             </div>
