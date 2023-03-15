@@ -95,6 +95,14 @@ const config = {
             position: 'right',
             label: 'Research',
           },
+          {
+            type: 'dropdown',
+            label: 'App',
+            position: 'right',
+            items: [
+              { to: 'https://61130061.github.io/3stap/', label: '3STAP', target: '_blank', },
+            ],
+          },
           {to: '/teams', label: 'Team', position: 'right'},
           {href: '/#contact', label: 'Contact', position: 'right'},
           {
