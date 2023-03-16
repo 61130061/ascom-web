@@ -4,7 +4,7 @@ import Layout from '@theme/Layout';
 import teams from '../team-data';
 import Link from '@docusaurus/Link';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
-// import { motion } from "framer-motion"
+import { motion } from "framer-motion"
 
 import astrolabLogo from '../../static/astrolab_logo.png';
 import satangLogo from '../../static/satang_logo.png';
@@ -66,13 +66,12 @@ export default function Home() {
     >
       <main>
         <div className="h-[920px] relative">
-          {/* <div className="absolute top-0 left-0 z-[20] w-full h-full bg-transparent" /> */}
           <div className="overflow-hidden" id="globe" />
           <div className="bg-gradient-to-b from-transparent to-[#111111] absolute h-[240px] left-0 bottom-0 right-0" />
-          <div
+          <motion.div
             className="absolute pt-28 md:pt-44 left-0 top-0 right-0 z-[30] h-full"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             <div className="flex flex-col gap-5 items-center z-20 px-5">
@@ -83,7 +82,7 @@ export default function Home() {
                 focus on Intelligent Aerospace Technology and project to the frontier research of Air-Space control, optimization, and management system.
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         <div className="mx-auto p-5 flex flex-wrap gap-y-5 gap-x-10 justify-center items-center">
@@ -93,7 +92,13 @@ export default function Home() {
         </div>
 
         <section id="research" className="container mx-auto flex flex-col items-center px-5 py-10">
-          <div className="flex justify-center md:px-5 py-10 mb-10">
+          <motion.div 
+            className="flex justify-center md:px-5 py-10 mb-10"
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+          >
             <div className="rounded-xl md:p-5 flex flex-wrap items-center gap-10">
               <div className="bg-white bg-opacity-5 border border-zinc-900 rounded-lg p-2 md:p-3 max-w-[640px] flex items-center">
                 <img className="object-fill rounded-lg" src={screenImg} />
@@ -110,9 +115,23 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-          <h1 className="text-4xl mb-10 font-semibold">Research Area</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+          </motion.div>
+          <motion.h1 
+            className="text-4xl mb-10 font-semibold"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+          >
+            Research Area
+          </motion.h1>
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+          >
             {research.map((d, i) =>
               <Link
                 to={d.url}
@@ -128,11 +147,17 @@ export default function Home() {
                 </div>
               </Link>
             )}
-          </div>
+          </motion.div>
         </section>
 
         <section id="team" className="py-5">
-          <div className="container mx-auto px-5">
+          <motion.div 
+            className="container mx-auto px-5"
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+          >
             <div className="flex justify-between items-center mb-8">
               <div>
                 <div className="uppercase text-sm font-bold text-transparent bg-clip-text bg-gradient-to-b from-pink-500 to-yellow-500">The team</div>
@@ -151,7 +176,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-          </div>
+          </motion.div>
           <div id="team-slider" className="hide-scrollbar flex overflow-x-scroll snap-mandatory snap-x mb-5">
             {Object.entries(teams).map(([key, value], oi) => 
               value.map((d, i) =>
@@ -168,7 +193,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="container mx-auto px-5 my-10">
+        <motion.section
+          id="contact"
+          className="container mx-auto px-5 my-10"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
           <div className="rounded-2xl bg-gradient-to-r from-yellow-500 via-pink-500 to-blue-500 text-center shadow border border-zinc-700">
             <div className="rounded-2xl bg-zinc-900 bg-opacity-20 py-10 md:py-16">
               <div>Like our work?</div>
@@ -193,7 +225,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
       </main>
     </Layout>
