@@ -4,6 +4,7 @@ import Layout from '@theme/Layout';
 import teams from '../team-data';
 import Link from '@docusaurus/Link';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+// import { motion } from "framer-motion"
 
 import astrolabLogo from '../../static/astrolab_logo.png';
 import satangLogo from '../../static/satang_logo.png';
@@ -68,7 +69,12 @@ export default function Home() {
           {/* <div className="absolute top-0 left-0 z-[20] w-full h-full bg-transparent" /> */}
           <div className="overflow-hidden" id="globe" />
           <div className="bg-gradient-to-b from-transparent to-[#111111] absolute h-[240px] left-0 bottom-0 right-0" />
-          <div className="absolute pt-28 md:pt-44 left-0 top-0 right-0 z-[30] h-full">
+          <div
+            className="absolute pt-28 md:pt-44 left-0 top-0 right-0 z-[30] h-full"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
             <div className="flex flex-col gap-5 items-center z-20 px-5">
               <h1 className="max-w-[1080px] text-4xl sm:text-5xl md:text-6xl font-extrabold text-center">
                 Air-Space Control, Optimazition, and Management <span className="text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-pink-500">Laboratory</span>
